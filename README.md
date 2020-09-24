@@ -5,6 +5,7 @@ This project is a guide to properly configure any flutter project using Firebase
 ## Documentation
 * [Prerequisites](#prerequisites)
 * [Setup Android app for Firebase](#setupAndroid)
+* [Setup iOS app for Firebase](#setupIOS)
 * [Troubleshooting](#troubleshooting)
 
 <a name="prerequisites"/>
@@ -65,6 +66,58 @@ When `applicationId` changes in build.gradle, you need to update other files. Fo
 If your code is under version-control system (like Git), please add the **google-services.json** to a **.gitignore** file
 
 To know [more](https://stackoverflow.com/questions/44937175/firebase-should-i-add-googleservice-info-plist-to-gitignore) about
+
+<a name="setupIOS"/>
+
+## Setup iOS app for Firebase
+
+### Xcode manipulation
+
+* Open with Xcode **Runner.xcworkspace** file in ios/ folder
+
+* In Xcode click on the parent .xcworkspace file
+
+* Update the **Bundle Identifier** following this format : `com.yourcompany.app_name`
+
+* Go to **Signing & Capabilities** tab
+
+* Select your team account. Make sure you have a valid certificate for Apple Development
+
+### Register app
+
+In Firebase console, go to Add app > iOS
+
+* Fill the **iOS bundle ID** following this format : `com.yourcompany.app_name`
+
+* Fill the **App nickname**
+
+* Click **next**
+
+### Download config file
+
+* Download **GoogleService-Info.plist**
+
+* Move the GoogleService-Info.plist file you just downloaded into ios > Runner directory
+
+### Add Firebase SDK
+
+Skip this step. Flutter will handle future installation of Firebase products
+
+### Add initialization code
+
+Skip this step. Firebase initialization will be written in Dart files
+
+***Quick tip***
+
+If your code is under version-control system (like Git), please add the **GoogleService-Info.plist** to a **.gitignore** file
+
+To know [more](https://stackoverflow.com/questions/44937175/firebase-should-i-add-googleservice-info-plist-to-gitignore) about
+
+
+
+
+
+
 
 <a name="troubleshooting"/>
 
