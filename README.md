@@ -6,6 +6,8 @@ This project is a guide to properly configure any flutter project using Firebase
 * [Prerequisites](#prerequisites)
 * [Setup Android app for Firebase](#setupAndroid)
 * [Setup iOS app for Firebase](#setupIOS)
+* [Update Android app display name](#updateAndroidappDisplayName)
+* [Update iOS app display name](#updateIOSappDisplayName)
 * [Troubleshooting](#troubleshooting)
 
 <a name="prerequisites"/>
@@ -117,7 +119,28 @@ To know [more](https://stackoverflow.com/questions/44937175/firebase-should-i-ad
 
 
 
+<a name="updateAndroidappDisplayName"/>
 
+## Update Android app display name
+
+Open the **android/app/src/main/AndroidManifest.xml** file
+
+Edit the **android:label** property : 
+```xml
+android:label="yourAppName"
+```
+
+<a name="updateIOSappDisplayName"/>
+
+## Update iOS app display name
+
+Open the **ios/Runner/Info.plist** file
+
+Edit the **CFBundleName** key :  
+```xml
+<key>CFBundleName</key>
+<string>yourAppName</string>
+```
 
 <a name="troubleshooting"/>
 
